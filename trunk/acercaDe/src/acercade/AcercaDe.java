@@ -27,6 +27,9 @@ public class AcercaDe extends javax.swing.JDialog implements java.awt.event.Mous
     private javax.swing.JScrollPane jScrollPane3;
     public static Rectangle PREFERED_SIZE = new Rectangle(590,430);
     
+    /*
+     Comentario
+     */
     public AcercaDe(DatosAcercaDe dad){
         super();
         nombreSW = dad.getNombreDelPrograma();
