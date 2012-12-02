@@ -14,5 +14,5 @@ public interface DatosAcercaDe {
     String getAutor();
     String getAno();
     String getEmailDeContacto();
-    int getIdiomaLicencia();
+    GPL.Idioma getIdiomaLicencia();
 }
