@@ -19,7 +19,7 @@ public class AcercaDe extends javax.swing.JDialog implements java.awt.event.Mous
     private String ano;
     private String descripcionDelPrograma;
     private String emailDeContacto;
-    private int idioma;
+    private GPL.Idioma idioma;
     private JLabel tituloAcercaDe;
     private JLabel lblHechoEnNetbeans;
     private JLabel panelLateral;
@@ -115,48 +115,48 @@ public class AcercaDe extends javax.swing.JDialog implements java.awt.event.Mous
     private void construirLicencia() {
         licencia.append("<"+this.nombreSW+" - "+this.descripcionDelPrograma+">\n");
         licencia.append("Copyright (C) <"+ano+"> <"+autor+">\n\n");
-        String lic = null;
-        switch(idioma){
-            case GPL.VERSION_ESPANOL:{
-                lic = GPL.ESPANOL;
-                lic += "Si tienes alguna duda, solo envía un correo electronico a: "+this.emailDeContacto;
-                break;
-            }
-            case GPL.VERSION_INGLES:{
-                lic = GPL.INGLES;
-                lic += "If you have any questions, just send an email to: "+this.emailDeContacto;
-                break;
-            }
-            case GPL.AMBAS_VERSIONES:{
-                lic = "ESPAÑOL: \n"+GPL.ESPANOL + "Si tiene alguna duda, solo envíe un correo electronico a:"+this.emailDeContacto+
+        String lic ;
+        
+        if(idioma == GPL.Idioma.ESPANOL){
+            lic = GPL.ESPANOL;
+            lic += "Si tienes alguna duda, solo envía un correo electronico a: "+this.emailDeContacto;
+        }else if(idioma == GPL.Idioma.INGLES){
+            lic = GPL.INGLES;
+            lic += "If you have any questions, just send an email to: "+this.emailDeContacto;
+        }else{
+            lic = "ESPAÑOL: \n"+GPL.ESPANOL + "Si tiene alguna duda, solo envíe un correo electronico a:"+this.emailDeContacto+
                   "\n\nENGLISH: \n"+ GPL.INGLES + "If you have any questions, just send an email to: "+this.emailDeContacto;
-                break;
-            }
         }
         licencia.append(lic);
         licencia.setCaretPosition(0);
     }
 
+    @Override
     public void mouseClicked(MouseEvent e) {
 //        throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
     public void mousePressed(MouseEvent e) {
 //        throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
     public void mouseReleased(MouseEvent e) {
         this.setVisible(true);
     }
 
+    @Override
     public void mouseEntered(MouseEvent e) {
 //        throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
     public void mouseExited(MouseEvent e) {
 //        throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
     public void actionPerformed(ActionEvent e) {
         this.setVisible(true);
     }

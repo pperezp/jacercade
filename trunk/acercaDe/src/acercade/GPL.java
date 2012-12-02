@@ -9,9 +9,10 @@ package acercade;
  * @author Pato
  */
 public class GPL {
-    public static final int VERSION_ESPANOL = 1;
-    public static final int VERSION_INGLES = 2;
-    public static final int AMBAS_VERSIONES = 3;
+    public static enum Idioma{
+        ESPANOL, INGLES, AMBOS_IDIOMAS
+    }
+    
     public static final String ESPANOL = 
         "Este programa es software libre: usted puede redistribuirlo y / o modificar "+
         "bajo los términos de la Licencia Pública General de GNU según lo publicado por "+
