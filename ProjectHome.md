@@ -1,0 +1,1 @@
+Proyecto netbeans con clases para hacer un pequeño acerca de basado en GNU [la licencia GNU escrita en español e ingles](incluye.md)
